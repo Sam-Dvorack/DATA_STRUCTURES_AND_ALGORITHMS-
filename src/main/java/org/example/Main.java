@@ -89,7 +89,7 @@ public class Main {
         // expDateTemp
         for (int i = 0; i < expDate.size(); i++) {
             // Get batch expiry.
-            LocalDate expiryDate = LocalDate.parse(expDate.poll().toString());
+            LocalDate expiryDate = LocalDate.parse(expDate.peek().toString());
 
             // Add adjusted date to temp variable.
             expDateTemp.add(expiryDate.minusDays(1));
@@ -97,7 +97,8 @@ public class Main {
 
         // Assign dates.
         expDate = expDateTemp;
-        System.out.println("Adjusted dates due to loadshedding \n" + expDate);
+        System.out.println("\n\nSales Products: \n" + salesProducts);
+        System.out.println("Adjusted dates due to loadshedding: \n" + expDate);
 
     }
 
